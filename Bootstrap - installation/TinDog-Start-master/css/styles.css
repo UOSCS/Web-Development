@@ -5,12 +5,10 @@ body {
 #title {
     background-color: #FF4C68;
     color: white;
-    overflow: hidden;
-    height: 750px;
 }
 
 .container-fluid {
-    padding: 3% 15%;
+    padding: 3% 15% 7%;
 }
 
 h1 {
@@ -67,16 +65,19 @@ p {
 /* Title image */
 
 .title-image {
-    display: block;
-    margin: 0 120px 0 auto ;
-    width: 60%;
+    position: absolute;
+    width: 20%;
     transform: rotate(25deg);
+    right: 24%;
 }
 
 /* Features section */
 
 #features {
     padding: 7% 15%;
+    background-color: white;
+    position: relative;
+    
 }
 
 .icon {
@@ -120,4 +121,57 @@ p {
 .press-logo {
     width: 15%;
     margin: 20px 20px 50px;
+}
+
+/* Pricing */
+
+#pricing {
+    padding: 100px;
+    text-align: center;
+}
+
+.pricing-col {
+    padding: 3% 2%;
+}
+
+/* Call to Action */
+
+#cta {
+    background-color: #FF4C68;
+    color: white;
+    text-align: center;
+    padding: 5% 10%;
+}
+
+.cta-description {
+    font-size: 3.5rem;
+    line-height: 1.5;
+}
+
+/* Footer */
+
+#footer {
+    background-color: white;
+    text-align: center;
+    padding: 10%;
+}
+
+.sns-icon {
+    margin: 0 1rem 2.5rem;
+}
+
+.copyright {
+    margin-bottom: 0;
+}
+
+@media (max-width: 972px) {
+    #title {
+        text-align: center;
+    }
+
+    .title-image {
+        position: static;
+        width: 60%;
+        transform: rotate(0);
+    }
 }

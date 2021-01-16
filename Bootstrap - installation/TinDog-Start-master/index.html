@@ -36,17 +36,17 @@
         <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link" href="">
+              <a class="nav-link" href="#footer">
                   Contact
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="">
+              <a class="nav-link" href="#pricing">
                   Pricing
               </a>
             </li>
             <li class="nav-item download-item">
-              <a class="nav-link" href="">
+              <a class="nav-link" href="#cta">
                   Download
               </a>
             </li>
@@ -142,41 +142,62 @@
     <h2>A Plan for Every Dog's Needs</h2>
     <p>Simple and affordable price plans for your and your dog.</p>
 
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
+      <div class="pricing-col col">
+        <div class="card">
+          <div class="card-header">
+            <h3>Chihuahua</h3>
+          </div>
+          <div class="card-body">
+            <h2>Free</h2>
+            <p>5 Matches Per Day</p>
+            <p>10 Messages Per Day</p>
+            <p>Unlimited App Usage</p>
+            <button type="button" class="w-100 btn btn-lg btn-outline-dark">Sign Up</button>
+          </div>
+        </div>
+      </div>
+      <div class="pricing-col col">
+        <div class="card">
+          <div class="card-header">
+            <h3>Labrador</h3>
+          </div>
+          <div class="card-body">
+            <h2>$49 / mo</h2>
+            <p>Unlimited Matches</p>
+            <p>Unlimited Messages</p>
+            <p>Unlimited App Usage</p>
+            <button type="button" class="w-100 btn btn-lg btn-dark">Sign Up</button>
+          </div>
+        </div>
+      </div>
 
-    <h3>Chihuahua</h3>
-    <h2>Free</h2>
-    <p>5 Matches Per Day</p>
-    <p>10 Messages Per Day</p>
-    <p>Unlimited App Usage</p>
-    <button type="button">Sign Up</button>
-
-
-    <h3>Labrador</h3>
-    <h2>$49 / mo</h2>
-    <p>Unlimited Matches</p>
-    <p>Unlimited Messages</p>
-    <p>Unlimited App Usage</p>
-    <button type="button">Sign Up</button>
-
-
-    <h3>Mastiff</h3>
-    <h2>$99 / mo</h2>
-    <p>Pirority Listing</p>
-    <p>Unlimited Matches</p>
-    <p>Unlimited Messages</p>
-    <p>Unlimited App Usage</p>
-    <button type="button">Sign Up</button>
+      <div class="pricing-col col-md-12">
+        <div class="card">
+          <div class="card-header">
+            <h3>Mastiff</h3>
+          </div>
+          <div class="card-body">
+            <h2>$99 / mo</h2>
+            <p>Pirority Listing</p>
+            <p>Unlimited Matches</p>
+            <p>Unlimited Messages</p>
+            <p>Unlimited App Usage</p>
+            <button type="button" class="w-100 btn btn-lg btn-dark">Sign Up</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
   </section>
-
 
   <!-- Call to Action -->
 
   <section id="cta">
 
-    <h3>Find the True Love of Your Dog's Life Today.</h3>
-    <button type="button">Download</button>
-    <button type="button">Download</button>
+    <h3 class="cta-description">Find the True Love of Your Dog's Life Today.</h3>
+    <button class="btn btn-lg btn-dark download-button" type="button"><i class="fab fa-apple"></i> Download</button>
+    <button class="btn btn-lg btn-light download-button" type="button"><i class="fab fa-google-play"></i> Download</button>
 
   </section>
 
@@ -184,8 +205,13 @@
   <!-- Footer -->
 
   <footer id="footer">
-
-    <p>© Copyright 2018 TinDog</p>
+    <div class="sns">
+      <i class="sns-icon fab fa-twitter"></i>
+      <i class="sns-icon fab fa-facebook-f"></i>
+      <i class="sns-icon fab fa-instagram"></i>
+      <i class="sns-icon fas fa-envelope"></i>
+    </div>
+    <p class="copyright">© Copyright 2018 TinDog</p>
 
   </footer>
 
