@@ -1,37 +1,45 @@
 body {
     font-family: 'Montserrat', sans-serif;
+    text-align: center;
 }
 
-#title {
-    background-color: #FF4C68;
-    color: white;
-}
-
-.container-fluid {
-    padding: 3% 15% 7%;
-}
-
-h1 {
-    font-weight: 900;
-    font-size: 3rem;
-    line-height: 1.5;
-}
-
-h2 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 900;
-    font-size: 3rem;
-    line-height: 1.5;
-}
-
-h3 {
-    font-size: 1.5rem;
+h1, h2, h3, h4, h5, h6 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 900;
 }
 
 p {
     color: #8F8F8F;
+}
+
+/* Container */
+
+.container-fluid {
+    padding: 7% 15%;
+}
+
+/* Sections */
+
+.colored-section {
+    background-color: #FF4C68;
+    color: white;
+}
+
+.white-section {
+    background-color: white;
+}
+
+/* Headings */
+
+.big-heading {
+    font-weight: 900;
+    font-size: 3rem;
+    line-height: 1.5;
+}
+
+.section-heading {
+    font-size: 3rem;
+    line-height: 1.5;
 }
 
 /* Navigation bar */
@@ -56,6 +64,13 @@ p {
     font-weight: 100;
 }
 
+/* Title section */
+
+#title .container-fluid {
+    padding: 3% 15% 7%;
+    text-align: left;
+}
+
 /* Download buttons */
 
 .download-button {
@@ -74,10 +89,12 @@ p {
 /* Features section */
 
 #features {
-    padding: 7% 15%;
-    background-color: white;
     position: relative;
     
+}
+
+.feature-title {
+    font-size: 1.5rem;
 }
 
 .icon {
@@ -90,16 +107,18 @@ p {
 }
 
 .feature-box {
-    text-align: center;
     padding: 6.5%;
 }
 
 /* Testimonial Section */
 
 #testimonials {
-    text-align: center;
     background-color: #EF8172;
-    color: #FFFFFF;
+}
+
+.testimonial-text {
+    font-size: 3rem;
+    line-height: 1.5;
 }
 
 .testimonial-image {
@@ -108,13 +127,8 @@ p {
     margin: 20px;
 }
 
-.carousel-item {
-    padding: 7% 15%;
-}
-
 #press {
     background-color: #EF8172;
-    text-align: center;
     padding-bottom: 3%;
 }
 
@@ -127,34 +141,20 @@ p {
 
 #pricing {
     padding: 100px;
-    text-align: center;
 }
 
 .pricing-col {
     padding: 3% 2%;
 }
 
-/* Call to Action */
-
-#cta {
-    background-color: #FF4C68;
-    color: white;
-    text-align: center;
-    padding: 5% 10%;
-}
-
-.cta-description {
-    font-size: 3.5rem;
+.price-text {
+    font-size: 3rem;
     line-height: 1.5;
 }
 
-/* Footer */
+/* Call to Action */
 
-#footer {
-    background-color: white;
-    text-align: center;
-    padding: 10%;
-}
+/* Footer */
 
 .sns-icon {
     margin: 0 1rem 2.5rem;
