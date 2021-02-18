@@ -1,6 +1,7 @@
 const express = require("express")
 const request = require("request")
 const https = require("https")
+const { dirname } = require("path")
 
 const app = express()
 const port = 3000
@@ -35,7 +36,11 @@ app.post("/", (req, res) => {
         auth: "leegwanh:900c6ce723b82f51ecdc80e355da0497-us1"
     }
     const request = https.request(url, options, (response) => {
-        if(response.statusCode === 200)
+        if(response.statusCode === 200) {
+            res.sendFile(__dirname + "/success.html")
+        } else {
+            res.sendFile(__dirname + "/failure.html")
+        }
         response.on("data", (data) => {
             console.log(JSON.parse(data))
         })
@@ -45,6 +50,10 @@ app.post("/", (req, res) => {
     request.end()
 })
 
-app.listen(port, () => {
+app.post("/failure", (req, res) => {
+    res.redirect("/")
+})
+
+app.listen(process.env.PORT | port, () => {
     console.log(`Server is running on port ${port}`)
 })
