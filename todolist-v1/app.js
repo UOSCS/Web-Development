@@ -1,32 +1,47 @@
 const express = require("express")
+const date = require(__dirname + "/date.js")
+
 const app = express()
-
 const port = 3000
-
-let items = []
+const items = []
+const workItems = []
 
 app.set("view engine", "ejs")
+app.use(express.static("public"))
 app.use(express.urlencoded({ extended: true }))
 
 app.get("/", (req, res) => {
-    const today = new Date()
-    const options = {
-        weekday: "long",
-        day: "numeric",
-        month: "long"
-    }
-    const day = today.toLocaleDateString("en-US", options)
+    const day = date.getDate()
 
     res.render("list", {
-        kindOfDay: day,
+        listTitle: day,
         addedItems: items
     })
 })
 
-app.post("/", (req, res) => {
-    items.push(req.body.newItem)
+app.get("/work", (req, res) => {
+    res.render("list", {
+        listTitle: "Work List",
+        addedItems: workItems
+    })
+})
 
-    res.redirect("/")
+app.post("/", (req, res) => {
+    const item = req.body.newItem
+
+    if(req.body.list === "Work List") {
+        workItems.push(item)
+        res.redirect("/work")
+    } else {
+        items.push(item)
+        res.redirect("/")
+    }
+})
+
+app.post("/work", (req, res) => {
+    workItems.push(req.body.newItem)
+
+    res.redirect("/work")
 })
 
 app.listen(port, (req, res) => {
